@@ -1,0 +1,136 @@
+/* Allgemeine Stile */
+body {
+    font-family: "Gill Sans MT", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* Ermöglicht Scrollen */
+	overflow-x: hidden; /* Verhindert das horizontale Scrollen */
+    color: white;
+}
+
+/* Hintergrundvideo */
+#re-Vid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Stellt sicher, dass das Video hinter allen Elementen bleibt */
+}
+
+/* Fest positioniertes Logo oben links */
+#fixed-logo {
+	position: fixed;
+	top: 10px; /* Abstand von oben */
+	left: 10px; /* Abstand von links */
+	width: auto; /* Breite automatisch anpassen, damit das Seitenverhältnis erhalten bleibt */
+	height: auto; /* Höhe automatisch anpassen, damit das Seitenverhältnis erhalten bleibt */
+	max-width: 200px; /* Maximale Breite des Logos */
+	max-height: 100px; /* Maximale Höhe des Logos */
+	z-index: 3; /* Über allen anderen Elementen */
+}
+
+/* Überschriften */
+h1 {
+    margin-top: 100px; /* Abstand, damit es nicht vom Logo überdeckt wird */
+    font-size: 2.5em;
+    text-align: center;
+}
+
+/* Menüband Styling */
+.navbar {
+    background-color: transparent;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    padding: 15px 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: calc(8px + (24 - 18) * (100vw - 400px) / (800 - 400)); /* Schriftgröße passt sich an */
+    transition: background-color 0.3s;
+}
+
+/* Hover-Effekt für Links */
+.navbar ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Hauptinhalt */
+.center {
+    position: relative;
+    z-index: 1;
+    display: block;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.6); /* Halbtransparenter Hintergrund für bessere Lesbarkeit */
+    padding: 20px;
+    max-width: 67%;
+    margin: 20px auto;
+    border-radius: 10px;
+	font-size: calc(8px + (24 - 18) * (100vw - 400px) / (800 - 400)); /* Schriftgröße passt sich an */
+}
+
+/* Bilder */
+.center img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Charaktere Bilder */
+.image-container {
+    display: flex; /* Flexbox aktiviert */
+    justify-content: space-between; /* Abstand zwischen den Bildern */
+    gap: 20px; /* Abstand zwischen den einzelnen Bildern */
+    flex-wrap: wrap; /* Wenn der Bildschirm zu klein ist, brechen die Bilder in die nächste Zeile */
+}
+
+.image-item {
+    text-align: center; /* Zentriert das Bild und den Text */
+    width: 23%; /* Die Bilder nehmen je 23% der Breite ein, sodass 4 nebeneinander passen */
+}
+
+img {
+    width: 100%; /* Bild passt sich der Breite des Containers an */
+    height: auto; /* Bild behält das Seitenverhältnis bei */
+}
+
+.caption {
+    margin-top: 8px; /* Etwas Abstand zwischen Bild und Unterschrift */
+}
+
+/* Fußzeile */
+.footer {
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 2;
+}
+
+/* Links in der Fußzeile */
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
