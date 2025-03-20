@@ -77,7 +77,7 @@ h1 {
     text-align: left;
     background: rgba(0, 0, 0, 0.6); /* Halbtransparenter Hintergrund für bessere Lesbarkeit */
     padding: 20px;
-    max-width: 67%;
+    max-width: 80%;
     margin: 20px auto;
     border-radius: 10px;
 	font-size: calc(8px + (24 - 18) * (100vw - 400px) / (800 - 400)); /* Schriftgröße passt sich an */
@@ -94,14 +94,33 @@ h1 {
 /* Charaktere Bilder */
 .image-container {
     display: flex; /* Flexbox aktiviert */
-    justify-content: space-between; /* Abstand zwischen den Bildern */
-    gap: 20px; /* Abstand zwischen den einzelnen Bildern */
-    flex-wrap: wrap; /* Wenn der Bildschirm zu klein ist, brechen die Bilder in die nächste Zeile */
+    flex-direction: column; /* Container bleibt in einer Spalte */
+    gap: 20px; /* Abstand zwischen den einzelnen Bild-Text-Elementen */
+    align-items: center; /* Zentriert die Items */
 }
 
 .image-item {
-    text-align: center; /* Zentriert das Bild und den Text */
-    width: 23%; /* Die Bilder nehmen je 23% der Breite ein, sodass 4 nebeneinander passen */
+    display: flex; /* Flexbox für das Bild und den Text */
+	flex-wrap: wrap; /* Ermöglicht es den Bildern, in mehrere Reihen zu brechen */
+    align-items: center; /* Vertikale Ausrichtung */
+    text-align: left; /* Text linksbündig */
+    width: auto; /* Die Breite für das Bild und den Text */
+    max-width: 80%; /* Maximale Breite für das Bild und den Text */
+    position: relative;
+}
+
+.image-item img {
+    width: auto; /* Bildbreite */
+    height: auto; /* Bildhöhe wird automatisch angepasst */
+    margin-right: 20px; /* Abstand zwischen Bild und Text */
+	object-fit: cover; /* Bild wird skaliert, um den gesamten Bereich abzudecken */
+}
+
+/*Formatirung der Texte neben denn Bildern*/
+.textfilme {
+    max-width: 600px; /* Maximale Breite des Textes */
+	font-size: calc(8px + (24 - 18) * (100vw - 400px) / (800 - 400)); /* Schriftgröße passt sich an */
+	text-align: justify ;
 }
 
 img {
@@ -110,7 +129,7 @@ img {
 }
 
 .caption {
-    margin-top: 8px; /* Etwas Abstand zwischen Bild und Unterschrift */
+    margin-right: 30px; /* Etwas Abstand zwischen Bild und Unterschrift */
 }
 
 /* Fußzeile */
@@ -135,6 +154,7 @@ img {
     text-decoration: underline;
 }
 
+/*Formular fuer Newsletter*/
 input[type="email"] {
     width: 100%;
     padding: 10px;
@@ -143,6 +163,7 @@ input[type="email"] {
     border-radius: 5px;
     font-size: 16px;
 }
+
 button {
     width: 100%;
     padding: 10px;
@@ -153,6 +174,7 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
+
 button:hover {
     background-color: #45a049;
 }
