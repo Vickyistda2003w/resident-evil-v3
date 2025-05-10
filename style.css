@@ -42,7 +42,7 @@ h1 {
 
 /* Menüband Styling */
 .navbar {
-    background-color: transparent;
+    background-color: #90332d;
     width: 100%;
 }
 
@@ -110,7 +110,7 @@ h1 {
 }
 
 .image-item img {
-    width: auto; /* Bildbreite */
+    width: auto; /* Bildbreite wird automatisch angepasst*/
     height: auto; /* Bildhöhe wird automatisch angepasst */
     margin-right: 20px; /* Abstand zwischen Bild und Text */
 	object-fit: cover; /* Bild wird skaliert, um den gesamten Bereich abzudecken */
@@ -129,7 +129,7 @@ img {
 }
 
 .caption {
-    margin-right: 30px; /* Etwas Abstand zwischen Bild und Unterschrift */
+    margin-right: 10px; /* Etwas Abstand zwischen Bild und Unterschrift */
 }
 
 /* Fußzeile */
